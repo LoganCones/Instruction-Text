@@ -1,0 +1,47 @@
+library(shiny)
+
+ui <- fluidPage(
+  mainPanel(
+    tags$div(
+      style = "font-size: 16px; font-weight: bold; margin-bottom: 10px;",
+      "Instructions:"
+    ),
+    tags$ul(
+      style = "list-style-type: disc; margin-left: 30px;",
+      tags$li(
+        style = "font-weight: bold;",
+        "Purpose:"
+      ),
+      tags$ul(
+        style = "list-style-type: circle; margin-left: 30px;",
+        tags$li(
+          "Describe the purpose of the application here."
+        )
+      ),
+      tags$li(
+        style = "font-weight: bold;",
+        "Example Use Case:"
+      ),
+      tags$ul(
+        style = "list-style-type: circle; margin-left: 30px;",
+        tags$li(
+          "Provide an example use case of the application here."
+        )
+      ),
+      tags$li(
+        style = "font-weight: bold;",
+        "Warnings:"
+      ),
+      tags$ul(
+        style = "list-style-type: circle; margin-left: 30px;",
+        tags$li(
+          "List any warnings or important information for the user here."
+        )
+      )
+    )
+  )
+)
+
+server <- function(input, output) {}
+
+shinyApp(ui, server)
